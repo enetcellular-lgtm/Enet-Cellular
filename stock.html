@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E Net Cellular | Available Stock</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+        body { background-color: #f4f4f4; padding: 20px; }
+        .container { max-width: 900px; margin: auto; background: white; padding: 30px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+        
+        header { text-align: center; margin-bottom: 30px; border-bottom: 3px solid #f39c12; padding-bottom: 10px; }
+        header h1 { color: #1a1a1a; }
+        header h1 span { color: #f39c12; }
+
+        .search-box { margin-bottom: 20px; width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 5px; }
+
+        table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+        th, td { padding: 15px; text-align: left; border-bottom: 1px solid #eee; }
+        th { background-color: #1a1a1a; color: white; }
+        
+        .status { font-weight: bold; padding: 5px 10px; border-radius: 4px; font-size: 0.85rem; }
+        .in-stock { background: #d4edda; color: #155724; }
+        .low-stock { background: #fff3cd; color: #856404; }
+        .out-of-stock { background: #f8d7da; color: #721c24; }
+
+        .back-btn { display: inline-block; margin-bottom: 20px; text-decoration: none; color: #f39c12; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <a href="index.html" class="back-btn">← Back to Main Website</a>
+    <header>
+        <h1><span>E Net</span> Cellular - Stock List</h1>
+    </header>
+
+    <input type="text" id="stockSearch" class="search-box" onkeyup="searchStock()" placeholder="Search items (e.g. iPhone, Samsung, Charger)...">
+
+    <table id="stockTable">
+        <thead>
+            <tr>
+                <th>Item Name</th>
+                <th>Category</th>
+                <th>Price (Rs.)</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>iPhone 13 Display (Original)</td>
+                <td>Repair Parts</td>
+                <td>25,000</td>
+                <td><span class="status in-stock">Available</span></td>
+            </tr>
+            <tr>
+                <td>Samsung Type-C Fast Charger</td>
+                <td>Accessories</td>
+                <td>3,500</td>
+                <td><span class="status low-stock">Low Stock (2 left)</span></td>
+            </tr>
+            <tr>
+                <td>9H Tempered Glass (iPhone 11)</td>
+                <td>Accessories</td>
+                <td>450</td>
+                <td><span class="status in-stock">Available</span></td>
+            </tr>
+            <tr>
+                <td>iPhone X Battery</td>
+                <td>Repair Parts</td>
+                <td>7,500</td>
+                <td><span class="status out-of-stock">Out of Stock</span></td>
+            </tr>
+            <tr>
+                <td>Silicon Back Covers (Mixed)</td>
+                <td>Accessories</td>
+                <td>850</td>
+                <td><span class="status in-stock">Available</span></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<script>
+    function searchStock() {
+        let input = document.getElementById('stockSearch').value.toLowerCase();
+        let rows = document.getElementById('stockTable').getElementsByTagName('tr');
+
+        for (let i = 1; i < rows.length; i++) {
+            let itemName = rows[i].getElementsByTagName('td')[0].innerText.toLowerCase();
+            rows[i].style.display = itemName.includes(input) ? "" : "none";
+        }
+    }
+</script>
+
+</body>
+</html>

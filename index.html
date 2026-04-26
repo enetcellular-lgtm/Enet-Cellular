@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E Net Cellular | Professional Mobile Repairs & Accessories</title>
+    
+    <style>
+        /* CSS STYLES */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body { background-color: #f9f9f9; color: #333; line-height: 1.6; }
+
+        .container { width: 85%; margin: auto; overflow: hidden; }
+
+        header { background: #1a1a1a; color: #fff; padding: 15px 0; border-bottom: #f39c12 3px solid; }
+        header h1 { float: left; text-transform: uppercase; letter-spacing: 1px; }
+        header h1 span { color: #f39c12; }
+        header nav { float: right; margin-top: 10px; }
+        header nav ul li { display: inline; margin-left: 20px; }
+        header nav a { color: #fff; text-decoration: none; font-weight: bold; }
+
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                url('phone.jpg') no-repeat center center/cover;
+            height: 450px;
+            color: #fff;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .hero h2 { font-size: 3rem; margin-bottom: 10px; }
+        .btn { display: inline-block; background: #f39c12; color: #fff; padding: 12px 25px; text-decoration: none; border-radius: 5px; margin-top: 20px; font-weight: bold; }
+
+        .section-title { text-align: center; margin: 50px 0 30px; font-size: 2.2rem; }
+
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; margin-bottom: 50px; }
+        .card, .item { background: #fff; padding: 25px; text-align: center; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+        .item img { width: 100%; height: 180px; object-fit: cover; border-radius: 5px; margin-bottom: 15px; }
+
+        .map-container { border: 5px solid #fff; border-radius: 10px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.1); margin-bottom: 50px; }
+
+        footer { background: #1a1a1a; color: #fff; text-align: center; padding: 40px 0; margin-top: 50px; }
+
+        /* Floating WhatsApp Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            background-color: #25d366;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            z-index: 1000;
+            transition: 0.3s;
+        }
+        
+        .whatsapp-float:hover { transform: scale(1.05); background-color: #128c7e; }
+        .whatsapp-icon { width: 25px; height: 25px; margin-right: 10px; }
+
+        @media (max-width: 768px) {
+            header h1, header nav { float: none; text-align: center; }
+            header nav { margin-top: 20px; }
+            .hero h2 { font-size: 2rem; }
+            .whatsapp-float span { display: none; }
+            .whatsapp-float { padding: 15px; border-radius: 50%; }
+            .whatsapp-icon { margin-right: 0; }
+        }
+
+/* Base style for the badge */
+.status-badge {
+    display: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: white;
+}
+
+/* Green for Available */
+.bg-available {
+    background-color: #25d366;
+    display: block;
+}
+
+/* Red for Not Available */
+.bg-not-available {
+    background-color: #ff4d4d;
+    display: block;
+}
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1><span>E Net</span> Cellular</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#shop">Shop</a></li>
+                    <li><a href="#location">Find Us</a></li>
+		    <a href="stock.html">Stock List</a>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h2>Expert Care for Your Devices</h2>
+            <p>Professional repairs and premium accessories at E Net Cellular.</p>
+            <!-- Updated Call Link -->
+            <a href="tel:+94755599922" class="btn">Call E Net Now</a>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title">Our Repair Services</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Display Replacement</h3>
+                    <p>High-quality screen replacements for all models.</p>
+                </div>
+                <div class="card">
+                    <h3>Battery Repair</h3>
+                    <p>Genuine battery replacements for longer life.</p>
+                </div>
+                <div class="card">
+                    <h3>Hardware Repair</h3>
+                    <p>Charging ports, cameras, and more.</p>
+                </div>
+		<div class="card">
+                    <h3>Phone Unlocking</h3>
+                    <p>Network unlocking, iCloud bypass, and FRP removal services for all models.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="shop" class="shop">
+        <div class="container">
+            <h2 class="section-title">Accessories Shop</h2>
+	    <div class="container" style="margin-top: 30px; text-align: center;">
+    
+</div>
+	    <p style="text-align: center; margin-bottom: 20px;">(Click on an item to check availability)</p>
+	    
+            <div class="grid">
+                <div class="item" onclick="checkStatus(this)" data-available="false">
+                    <img src="backcovers.jpg" alt="Back Cover">
+                    <h4>Premium Cases</h4>
+		    <div class="status-badge">Available in Stock</div>
+                </div>
+                <div class="item" onclick="checkStatus(this)" data-available="true">
+                    <img src="charger.jpg" alt="Charger">
+                    <h4>Fast Chargers</h4>
+		    <div class="status-badge">Available in Stock</div>
+                </div>
+                <div class="item" onclick="checkStatus(this)" data-available="true">
+                    <img src="temped.jpg" alt="Tempered">
+                    <h4>Tempered Glass</h4>
+		    <div class="status-badge">Available in Stock</div>
+                </div>
+		<div class="item" onclick="checkStatus(this)" data-available="true">
+                    <img src="battery.jpg" alt="Batteries">
+                    <h4>Batteries</h4>
+		    <div class="status-badge">Available in Stock</div>
+               </div>
+		<div class="item" onclick="checkStatus(this)" data-available="true">
+                    <img src="powerbank.jpg" alt="Power Bank">
+                    <h4>Power Banks</h4>
+		    <div class="status-badge">Available in Stock</div>
+                </div>
+		<div class="item" onclick="checkStatus(this)" data-available="true">
+                    <img src="earbuds.jpg" alt="Ear buds">
+                    <h4>Ear Buds</h4>
+		    <div class="status-badge">Available in Stock</div>
+                </div>
+		<div class="item" onclick="checkStatus(this)" data-available="false">
+                    <img src="cameralense.jpg" alt="Camera Lense">
+                    <h4>Canera Lense</h4>
+		    <div class="status-badge">Available in Stock</div>
+                </div>
+		<div class="item" onclick="checkStatus(this)" data-available="true">
+                    <img src="speakers.jpg" alt="Speakers">
+                    <h4>Speakers</h4>
+		    <div class="status-badge">Available in Stock</div>
+                </div>
+		<div class="item" onclick="checkStatus(this)" data-available="true">
+                    <img src="display.jpg" alt="Displays">
+                    <h4>Disply</h4>
+		    <div class="status-badge">Available in Stock</div>
+                </div>
+		<div class="item" onclick="checkStatus(this)" data-available="true">
+                    <img src="usb.jpg" alt="USB Flash">
+                    <h4>USB Flash(Pen Drive)</h4>
+		    <div class="status-badge">Available in Stock</div>
+                </div>
+		<div class="item" onclick="checkStatus(this)" data-available="true">
+                    <img src="car charger.jpg" alt="car charger">
+                    <h4>Car Charger</h4>
+		    <div class="status-badge">Available in Stock</div>
+                </div>
+		<div class="item" onclick="checkStatus(this)" data-available="true">
+                    <img src="Memory Card.jpg" alt="Memory Card">
+                    <h4>Memory Card</h4>
+		    <div class="status-badge">Available in Stock</div>
+                </div>
+    </section>
+
+    <section id="location" class="location">
+        <div class="container">
+            <h2 class="section-title">Visit Us</h2>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d15845.633515650115!2d79.9360013!3d6.841546450000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e6!4m3!3m2!1d6.837604!2d79.94183559999999!4m5!1s0x3ae25156b5da8331%3A0x101bce10a1df3bd!2se-net%20cellular%2C%2044%2F1%2F1%20Dehiwala%20Rd%2C%20Maharagama%2010280%2C%20Sri%20Lanka!3m2!1d6.8460697999999995!2d79.9260194!5e0!3m2!1sen!2slk!4v1767818391184!5m2!1sen!2slk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>44/1/1 Dehiwala Rd, Maharagama 10280| Hotline: +94 75 559 9922 | email : enetcellular@gmail.com</p>
+            <p>&copy; 2024 E Net Cellular. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- UPDATED WHATSAPP BUTTON FOR 0755599922 -->
+    <a href="https://wa.me E Net Cellular! I want to inquire about a repair or accessory." class="whatsapp-float" target="_blank">
+        <img src="download.jpg" alt="WhatsApp" class="whatsapp-icon">
+        <span>Chat with us</span>
+    </a>
+
+
+<script>function checkStatus(element) {
+    const badge = element.querySelector('.status-badge');
+    const isAvailable = element.getAttribute('data-available') === "true";
+
+    if (isAvailable) {
+        badge.innerHTML = "Available in Stock";
+        badge.className = "status-badge bg-available";
+    } else {
+        badge.innerHTML = "Out of Stock";
+        badge.className = "status-badge bg-not-available";
+    }
+}
+function filterAccessories() {
+    // Get the search input value and convert to lowercase
+    let input = document.getElementById('accessorySearch').value.toLowerCase();
+    
+    // Get all accessory items
+    let items = document.querySelectorAll('.item');
+
+    items.forEach(item => {
+        // Find the product name (h4 tag) inside each item
+        let productName = item.querySelector('h4').innerText.toLowerCase();
+        
+        // If the name matches the search, show it; otherwise, hide it
+        if (productName.includes(input)) {
+            item.style.display = ""; // Show
+        } else {
+            item.style.display = "none"; // Hide
+        }
+    });
+}
+
+</script>
+
+</body>
+</html>
+
